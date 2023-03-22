@@ -5,7 +5,7 @@ export const Notification = ({ message }) => {
     const warnMessage = () => {
         setTimeout(() => {
             Notiflix.Notify.warning(`${message}`)
-        }, 2000);
+        }, 1000);
     }
 
     return (

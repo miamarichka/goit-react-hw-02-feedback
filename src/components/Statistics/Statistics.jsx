@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { StatItem, StatTextTotal, StatTextPercent } from './Statistics.styled';
 
 
 export const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
@@ -7,12 +8,14 @@ export const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
     return (
       <section>
         <ul>
-          <li>Good: {good}</li>
-          <li>Neutral: {neutral}</li>
-          <li>Bad: {bad}</li>
+          <StatItem>Good: {good}</StatItem>
+          <StatItem>Neutral: {neutral}</StatItem>
+          <StatItem>Bad: {bad}</StatItem>
         </ul>
-        <p>Total: {total}</p>
-        <p>Positive feedback: {positivePercentage} %</p>
+        <StatTextTotal>Total: {total}</StatTextTotal>
+        <StatTextPercent>
+          Positive feedback: {positivePercentage} %
+        </StatTextPercent>
       </section>
     );
 }
